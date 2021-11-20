@@ -1,0 +1,14 @@
+.container1{
+    display: flex;
+ justify-content: flex-start;
+}
+
+.list{
+  
+    border-radius: 20px;
+}
+
+.button{
+    display: flex;
+    font-size: 10px;
+}
