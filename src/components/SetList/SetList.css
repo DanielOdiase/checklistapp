@@ -1,0 +1,14 @@
+.SetList{
+    display: flex;
+    font-size:14px;
+    margin-right:5px;
+    padding:7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.SetList.active{
+    display: flex;
+    background-color: #59b256;
+    color:white;
+}

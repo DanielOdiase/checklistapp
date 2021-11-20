@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+*{
+  font-family: 'Playfair Display', serif;
+}
+.App{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  overflow-x: hidden;
+ 
+}
+
+.container{
+  display: flex;
+ justify-content: center;
+  
+ 
+}
+.projBody{
+  display: flex;
+  flex-direction:column;
+  width:300px;
+  align-items: center;
+ 
+  border-radius: 20px;
+  
+  
+}
+.sent{
+  display: flex;
+  flex-direction: column;
+  width:300px;
+  align-items: center;
+ 
+  
+}
+.won{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+ 
+  width:300px;
+ 
+}
+.ongoing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:300px;
+}
+
+@media screen and (max-width:1072px) {
+  h1.heading{
+    display:block;
+  }
+  .container{
+    display: flex;
+    flex-direction:column;
+  }
+
+}
