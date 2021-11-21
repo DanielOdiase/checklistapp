@@ -49,11 +49,13 @@ export default function SignUp() {
     setLoading(true)
     try{
         await signup(emailRef.current.value,passwordRef.current.value)
+       
         
     }catch{
-        alert("Error")
+        alert("Invalid email/password ,please ensure your password is over 6 charaters")
     }
    setLoading(false)
+   
    {
 
    }
@@ -101,6 +103,7 @@ export default function SignUp() {
               id="password"
               autoComplete="current-password"
             />
+            <p>Password has to be more than six(6) characters</p>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
