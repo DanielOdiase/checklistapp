@@ -56,9 +56,7 @@ export default function SignUp() {
     }
    setLoading(false)
    
-   {
-
-   }
+   
   };
 
   
