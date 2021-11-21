@@ -4,7 +4,7 @@ import "./Topbar.css"
 function Topbar({addProject,projectValue,setProject}) {
     return (
         <div className="text">
-            <h1 className="heading">Project Status ?</h1>
+            <h1 className="heading">What's the Project status?</h1>
         <form onSubmit={addProject}>
        <TextField id="standard-basic" 
        label="Please enter Project" 
