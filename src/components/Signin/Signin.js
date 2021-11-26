@@ -51,7 +51,7 @@ export default function SignIn() {
       
         await signin(emailRef.current?.value,passwordRef.current?.value)
        
-        navigate("/")
+        navigate("/app")
    }catch{
        alert("Invalid Username/password")
    }
