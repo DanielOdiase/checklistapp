@@ -10,7 +10,7 @@ export default function Private({children}) {
   
   return (
     
-        !currentUser? children : <Navigate to="/" />
+        !currentUser? children : <Navigate to="/app" />
       
         
   )

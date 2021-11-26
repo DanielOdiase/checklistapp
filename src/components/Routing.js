@@ -13,13 +13,12 @@ function Routing(){
         <Router>
         <AuthProvider>
         <Routes>
+        <Route path="/signup" element={<SignUp/>} />
         <Route
-          path="/" element={ <PrivateRoute> <App /></PrivateRoute>}/>
-              <Route
           path="/signin" element={ <Private> <SignIn/></Private>}/>
-              
-              <Route path="/signup" element={<SignUp/>} />
-              
+        <Route
+          path="/app" element={ <PrivateRoute> <App /></PrivateRoute>}/>
+           
             </Routes>
             </AuthProvider>
             </Router> 
