@@ -6,9 +6,10 @@
       "**/.*",
       "**/node_modules/**"
     ],
+  
     "rewrites": [{
-      "source": "/signin/**",
-      "destination": "/index.html"
+       "source": "**",
+       "destination": "/index.html"
     }]
     
     }
