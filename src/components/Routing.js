@@ -5,7 +5,7 @@ import React from 'react'
 import App from '../App'
 import SignUp from './SignUp/SignUp'
 import PrivateRoute from './PrivateRoute'
-import Private from './Private'
+
 
 function Routing(){
     return (
