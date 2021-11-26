@@ -5,12 +5,11 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
-,
-  "rewrites": [{
-    "source": "/signin/**",
-    "destination": "/Signin.js"
-  }
-  ]
-  }
+    ],
+    "rewrites": [{
+      "source": "/signin/**",
+      "destination": "/index.html"
+    }]
+    
+    }
 }
