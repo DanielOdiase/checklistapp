@@ -1,0 +1,15 @@
+
+.estimatesec{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: inherit;
+}
+.estimatebody{
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

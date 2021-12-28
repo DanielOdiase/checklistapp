@@ -1,0 +1,67 @@
+
+.rbar{
+    position:fixed;
+}
+.imgpic{
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background-color:white;
+    margin: 40px;
+}
+.avatar{
+    vertical-align: middle;
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color:gray;
+    border-style: outset;
+}
+.topcontainer{
+    display: flex;
+    background-color: white;
+}
+
+.description{
+    margin-top:40px;
+    margin-left:-37px;
+    line-height: 0px;
+}
+
+.uploadbutt{
+   width:86px;
+   display: block; 
+   margin-top:5px;
+   cursor: pointer;
+
+}
+
+.taskbtn{
+ margin-left: 40px;
+}
+button{
+    background-color: black;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    padding:6px;
+}
+.eventform{
+    display:block;
+}
+.eventform.active{
+    display:none;
+}
+
+.eventDiv{
+    display:block;
+    line-height: 38px;
+}
+.eventDiv.active{
+    display:none
+}
+.form-container{
+    display:flex;
+    flex-direction: row;
+}

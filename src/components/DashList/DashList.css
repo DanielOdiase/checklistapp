@@ -1,0 +1,8 @@
+.listbody{
+    display: flex;
+    cursor: pointer;
+    margin-left: 15px;
+    width: 450px;
+    justify-content: space-around;
+    
+}

@@ -1,0 +1,17 @@
+.DashbarList{
+    display: flex;
+    font-size:14px;
+    padding:7px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+    color:black
+    
+}
+
+.DashbarList.active{
+    display: flex;
+    background-color: black;
+    color:white;
+   
+}

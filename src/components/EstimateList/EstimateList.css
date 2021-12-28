@@ -1,20 +1,19 @@
-.SetList{
+.EstimateList{
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-size:14px;
-    margin-left:0px;
+    margin-right:5px;
     padding:7px;
     border-radius: 10px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: black;
 }
 
-.SetList.active{
+.EstimateList.active{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     color:black;
-    text-decoration: underline 8px;
-    text-decoration-color:#FABB18 ;
-    
 }

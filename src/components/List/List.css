@@ -1,8 +1,27 @@
-
+.listcont{
+    background-color: inherit;
+}
 .listi{
     display: flex;
+    width: 100%;
+    margin-left:0;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: inherit;
+    line-height: 0;
+    color: black;
+    
 }
 h1.active{
-    background-color: #59b256;
-    color:white;
+    text-decoration: underline 8px;
+    text-decoration-color:#FABB18 ;
+    text-decoration-style: solid;
+    color:black
+}
+.projectlistsection{
+    background-color:inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

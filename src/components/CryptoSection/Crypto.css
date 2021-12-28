@@ -1,0 +1,48 @@
+.headings{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 72px;
+    margin-right: 40px;
+
+}.crypto10{
+    display: flex;
+    flex-direction: row; 
+    align-items:center;
+    justify-content: space-between;
+   
+ }
+ .crypto-home{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ }
+ .crypto-list{
+     width:100px; 
+   
+ }
+ 
+ .crypValue{
+   
+     width: 100px;
+     
+    
+     
+ }
+ 
+ .percentChange{
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: flex-start;
+
+}
+     
+     
+.cryp-percent{
+    color: #32CD32;
+    width:100px;
+    
+}

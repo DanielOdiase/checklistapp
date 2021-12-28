@@ -1,0 +1,43 @@
+.teams{
+   display: flex;
+   flex-direction: row; 
+   align-items:center;
+   justify-content: space-between;
+  
+}
+
+.hometeam{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.teamname-home{
+    width:100px;
+    
+}
+.teamname-away{
+    width:100px;
+    
+}
+.time{
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.awayteam{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
+    
+    
+.score{
+    margin-left:30px
+}
+
+.score-v{
+margin-right:30px
+}

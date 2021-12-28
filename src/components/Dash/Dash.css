@@ -1,0 +1,17 @@
+.DashList{
+    display: flex;
+    font-size:14px;
+    padding:7px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.DashList.active{
+    display: flex;
+    color:#FABB18;
+   
+}
+

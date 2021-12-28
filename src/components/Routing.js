@@ -5,7 +5,6 @@ import React from 'react'
 import App from '../App'
 import SignUp from './SignUp/SignUp'
 import PrivateRoute from './PrivateRoute'
-import Private from './Private'
 
 
 function Routing(){
@@ -16,9 +15,12 @@ function Routing(){
         <Routes>
         <Route path="/" element={<SignUp/>} />
         <Route
-          path="/signin" element={ <Private><SignIn/> </Private>}/>
+          path="/signin" element={ <SignIn/>}/>
         <Route
-          path="/app" element={ <PrivateRoute> <App /></PrivateRoute>}/>
+          path="/app/*" element={ <PrivateRoute> <App /></PrivateRoute>}/>
+      
+        
+  
            
             </Routes>
             </AuthProvider>

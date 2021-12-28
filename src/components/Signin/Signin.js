@@ -51,7 +51,7 @@ export default function SignIn() {
       
         await signin(emailRef.current?.value,passwordRef.current?.value)
        
-        navigate("/app")
+        navigate("/app/dashboard")
    }catch{
        alert("Invalid Username/password")
    }
@@ -106,11 +106,9 @@ export default function SignIn() {
               label="Remember me"
             />
             <Button
-            
               type="submit"
               fullWidth
               variant="contained"
-              
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In

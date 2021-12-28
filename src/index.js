@@ -6,9 +6,9 @@ import Routing from './components/Routing';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <Routing />
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 

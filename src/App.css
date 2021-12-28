@@ -13,21 +13,33 @@
  
 }
 
-.container{
-  display: flex;
- justify-content: center;
-  
- 
+.side-b{
+  position: fixed;
+  width: 21.9%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
 }
-.projBody{
-  display: flex;
-  flex-direction:column;
-  width:300px;
-  align-items: center;
- 
-  border-radius: 20px;
-  
-  
+
+.container{
+    position: relative;
+    left: 21.9%;
+    top:0;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 41.7%;
+    
+}
+.Rightbar{
+    position: fixed;
+    top: 0;
+    width: 36.4%;
+    height: 100%;
+    right: 0;
+    
+    background-color:white;
 }
 .sent{
   display: flex;

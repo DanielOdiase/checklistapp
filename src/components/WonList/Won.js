@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { doc,updateDoc,deleteDoc} from '@firebase/firestore';
 import { Button, ListItem, ListItemText } from "@mui/material";
 import db from "../../firebase_config";
@@ -6,9 +6,10 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import "./Won.css"
 
-function WonList({project,inprogress,id}){
-
+function WonList({project,inprogress,id,description}){
+  const [lineState, setlineState] = useState(true)
     async function wonToggle(){
+      setlineState(false)
         const docRef = doc(db,"projects",id);
      const payload= {inprogress:3};
       await updateDoc(docRef,payload) 
@@ -21,25 +22,33 @@ function WonList({project,inprogress,id}){
 
   
 return(
-        <div className="wonContainer" style={{display:"flex"}}> 
-         <Box sx={{ width: '150px', maxWidth: 360 }}>
-  <nav aria-label="main mailbox folders"></nav>
-  <List>
-<ListItem>
-<ListItemText primary={project} secondary={inprogress ?"ongoing":"won"} />
+  <div className="container1" style={{display:"flex"}}> 
+  <div className="list" >
+<Box sx={{ width: '150px', maxWidth: 360}}>
+<nav aria-label="main mailbox folders"></nav>
+<List disablePadding>
+<ListItem className="listIT">
+<ListItemText primary={project} secondary={inprogress?"sent":"estimate"&& description} style={lineState?{textDecoration:'none'}:{textDecoration:'line-through'}}  />
 </ListItem>
 </List>
 </Box>
-<Button style={{fontSize:"10px"}}onClick={wonToggle}>
- next stage
+</div>
+
+<div className="button" >
+<form onSubmit={wonToggle}>
+<div className="nextdiv">
+<Button style={{fontSize:'15px',color:"#FABB18"}} onClick={wonToggle}>
+{`>>`}
 </Button>
+</div>
+</form>
+<div className="deletediv">
 <Button onClick={deleteDocument}>
 🗑️
 </Button>
-  </div>  
-  
-  
+</div>
+</div>
+</div>  
 )
 }
-
 export default WonList

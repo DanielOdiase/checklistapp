@@ -12,10 +12,12 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink,useNavigate } from 'react-router-dom';
 import { useAuth } from '../../firebase_config';
 import { useRef } from 'react';
 import { useState } from 'react';
+import db from '../../firebase_config';
+import { collection,addDoc} from '@firebase/firestore';
 
 
 function Copyright(props) {
@@ -37,20 +39,34 @@ const theme = createTheme();
 
 export default function SignUp() {
     const[loading,setLoading]=useState(false)
-    const {signup}=useAuth()
+    const {signup,currentUser}=useAuth()
     const emailRef = useRef()
-    
+    const navigate= useNavigate() 
      const passwordRef = useRef()
+     const [namestate, setnamestate] = useState("")
+     const [emailstate, setemailstate] = useState("")
+     const [occupationState, setOccupationState] = useState("")
 
-
+     async function addName(){
+   const nameRef = collection(db,"users");
+   const payload= {name:namestate,
+   email:emailstate.toLowerCase(),
+   occupationState:occupationState};
+    setLoading(true)
+    await addDoc(nameRef,payload)
+    setnamestate("")
+    setOccupationState("")
+    setLoading(false)
+    }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true)
     try{
         await signup(emailRef.current.value,passwordRef.current.value)
-       
-        
+        navigate("/signin")
+        addName()
+
     }catch{
         alert("Invalid email/password ,please ensure your password is over 6 charaters")
     }
@@ -58,7 +74,6 @@ export default function SignUp() {
    
   };
 
-  
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -77,6 +92,31 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign Up
           </Typography>
+         
+          <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Name"
+              name="name"
+              value={namestate}
+              onChange={(e)=>setnamestate(e.target.value)}
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Occupation"
+              name="name"
+              value={occupationState}
+              onChange={(e)=>setOccupationState(e.target.value)}
+              autoComplete="email"
+              autoFocus
+            />
           <Box component="form" disabled={loading} onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
@@ -86,6 +126,7 @@ export default function SignUp() {
               label="Email Address"
               name="email"
               inputRef={emailRef}
+              onChange={()=>setemailstate(emailRef.current.value)}
               autoComplete="email"
               autoFocus
             />
@@ -113,6 +154,7 @@ export default function SignUp() {
             >
               Sign Up 
             </Button>
+            <p>{currentUser?"You are signed in":""}</p>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
