@@ -17,7 +17,7 @@ const firebaseConfig = {
   projectId: "checklistapp-2af94",
   storageBucket: "checklistapp-2af94.appspot.com",
   messagingSenderId: "633470529340",
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  appId: "1:633470529340:web:0f285ba2b728cf07bb7839"
 };
 
 // Initialize Firebase

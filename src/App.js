@@ -1,6 +1,6 @@
 
 import './App.css';
-import {useState,useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import db from './firebase_config';
 import { collection,addDoc,serverTimestamp, onSnapshot} from '@firebase/firestore';
 import { useAuth } from './firebase_config';
