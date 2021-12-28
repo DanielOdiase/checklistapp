@@ -3,8 +3,13 @@
 A live version of the app can be viewed [here](https://checklistapp-2af94.web.app/)
 ---
 
+
+### Design Tools
+Figma
+Prototype view :[here](https://www.figma.com/proto/q2qhWsGhvcQsH39Byet4zQ/CheckListApp?page-id=0%3A1&node-id=4%3A8&viewport=241%2C48%2C0.44&scaling=min-zoom&starting-point-node-id=228%3A1260)
+
 ### Front-End Tools
-HTML,CSS ,ReactJs
+HTML,CSS ,ReactJs,Material-UI
 
 ### Back-End Tools
 Firebase
@@ -16,23 +21,42 @@ The decision to use a severless architecture was based on a few reasons .
 
 
 
-
 ### Overview
-Working as a project manager , i noticed i needed some sort of task management platform to keep track of my daily estimates , projects i've won and my ongoing projects.I needed something small and most importantly free and super simple. This pushed me to create the Checklist app. 
-It's a super simple CRUD app that allows its users to add tasks and change the state from :Estimate,Sent Estimates,Won Projects,Ongoing projects .Once the project is complete, user can delete the task. The Checklist app also includes user authentiction that allows users to sign up for the app. 
+Working as a project manager , i noticed i needed some sort of task management platform to keep track of my daily estimates and projects .I needed something small and most importantly free and super simple. Im also a big crypto and basketball guy , so i included both interest in my app by connecting to the coingecko api as well as the NBA API  in order to keep track of my favorite cryptos and basketball games. Hence the Checklist app was born. 
+It's a super simple CRUD app that allows its users to add tasks and change the state from :Estimate,Sent Estimates,Won Projects,Ongoing projects.The Checklist app also includes user authentiction that allows users to sign up for the app. With the version2 , users are able to add a profile picture. Also each user can only access and view thier own posts.
 
-The first step in this process is the login. This is done through the login screen, that also allows immediate sign up if the user does not already have an account.
+The first step in this process is the login. This is done through the login screen, that also allows sign up if the user does not already have an account.
 
-After validating your credentials, the next step is the main dashboard that displays current tasks and thier stages . This is the screen that will allow users to create taks, change task state and delete tasks.
+
+### Version 1
+
+---
+This version was my first iteration of the app . 
+
+It was a super simple design 
+
+that allowed users to input a project and change its stage based on ; estimate, sent, won ,ongoing . 
+
+A live version of the app can be viewed [here](https://checklistappv2-0.web.app/)
+
+
+
+### Version 2 
+---
+A live version of the app can be viewed [here](https://checklistapp-2af94.web.app/)
+Includes:
+
+New crypto page, sports page, weather page, user profile picture , personalized user content 
+
+
 
 
 ### A description of any enhancements or additional features that will be added in the future.
 
 - Test cases for ALL routes 
-- Persistent session storage for current user
 - Secure sessions
-- Connect app to weather api and crypto api
-- 
+- Connect app to weather api and crypto api(Added)
+
 
 
 
